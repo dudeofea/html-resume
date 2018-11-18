@@ -1,0 +1,15 @@
+{
+  "name": "denis-resume",
+  "version": "1.0.0",
+  "description": "An HTML resume",
+  "scripts": {
+    "start": "./start.sh"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "font-awesome": "^4.6.3",
+    "live-server": "^1.2.0",
+    "node-sass": "^3.10.0"
+  }
+}
