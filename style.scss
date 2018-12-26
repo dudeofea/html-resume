@@ -2,43 +2,116 @@
 html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,label,legend,p,blockquote,table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}body{line-height:1;color:black;background:white;}:focus{outline:0;}table{border-collapse:collapse;border-spacing:0;}caption,th,td{text-align:left;font-weight:normal;}fieldset,img{border:0;}address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}ol,ul{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}blockquote:before,blockquote:after,q:before,q:after{content:"";}blockquote,q{quotes:"" "";}abbr,acronym{border:0;}
 
 //fonts
-@import 'https://fonts.googleapis.com/css?family=Montserrat|Open+Sans';
-@import "node_modules/font-awesome/scss/font-awesome.scss";
+@import 'https://fonts.googleapis.com/css?family=Patua+One|Raleway:500';
+@import 'https://fonts.googleapis.com/css?family=Alegreya:400,400i,500,500i,700,700i,800,800i,900,900i|Neuton:200,300,400,400i,700,800|Noto+Serif+SC:200,300,400,500,600,700,900|Vollkorn:400,400i,600,600i,700,700i,900,900i|Yrsa:300,400,500,600,700';
+@import "node_modules/@fortawesome/fontawesome-free/css/all.css";
 
 //color palette
 $white: #fff;
-$black: #222;
+$black: #191923;
+$blue: #0E79B2;
+$blue_highlight: #C2DFE3;
+
+//variables
+$header_height: 60px;
 
 html, body {
 	display: block;
 	width: 100%;
 	height: 100%;
+	background-color: $black;
 }
 
 .resume {
-	height: 100%;
-	width: 100%;
-	font-size: 0;
-	//white part
-	.left-content, .right-content {
-		background-color: $white;
-		height: 100%;
-		width: 70%;
-		display: block;
-		float: left;
+	height:297mm;
+    width:210mm;
+	background-color: $white;
+	margin: 20px auto;
+	.header {
+		height: $header_height;
+		background-color: $blue;
 		h1 {
+			height: $header_height;
+		    line-height: $header_height;
+		    text-align: center;
 			font-size: 30pt;
-			font-weight: bold;
-			font-family: 'Monserrat', sans-serif;
-			color: $black;
-			position: absolute;
-			top: 100px;
-			left: 100px;
+			font-family: 'Patua One', sans-serif;
+			color: $blue_highlight;
 		}
 	}
-	//white part
-	.right-content {
-		background-color: $black;
-		width: 30%;
+	.bootstrap-banner {
+		height: 150px;
+		overflow: hidden;
+		position: relative;
+		img {
+			filter: grayscale(70%) brightness(50%);
+		}
+		.title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			z-index: 1;
+			color: $white;
+			transform: translate(-50%, -50%);
+			font-size: 36px;
+			font-weight: 600;
+			font-family: 'Yrsa', serif;
+		}
+	}
+	.meaningful-quotes{
+		font-size: 0;
+		.quote {
+			font-size: initial;
+			display: inline-block;
+			width: 50%;
+			padding: 20px;
+			box-sizing: border-box;
+			vertical-align: middle;
+			font-family: 'Yrsa', serif;
+			line-height: 20px;
+		}
+		.text {
+			margin-bottom: 10px;
+			font-size: 16px;
+			font-weight: 100;
+		}
+		.author, .company {
+			text-align: right;
+			color: rgba(0,0,0,0.8);
+			font-size: 18px;
+			font-weight: 400;
+		}
+		.company {
+			color: rgba(0,0,0,0.6);
+		}
+	}
+	.bootstrap-circles {
+		font-size: 0;
+		font-family: 'Yrsa', serif;
+		padding: 10px;
+		& > div {
+			font-size: initial;
+			display: inline-block;
+			width: 33%;
+			text-align: center;
+			height: 250px;
+			vertical-align: top;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.fas, .fab {
+			font-size: 50px;
+			margin: 8px;
+		}
+		.title {
+			font-size: 25px;
+			font-weight: 400;
+			margin-bottom: 5px;
+		}
+		.text {
+			font-weight: 100;
+			font-size: 17px;
+			color: rgba(0,0,0,0.7);
+		}
 	}
 }
