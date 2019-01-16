@@ -73,7 +73,7 @@ html, body {
       font-family: 'Patua One', sans-serif;
       color: #C2DFE3; }
   .resume .bootstrap-banner {
-    height: 150px;
+    height: 110px;
     overflow: hidden;
     position: relative; }
     .resume .bootstrap-banner img {
@@ -85,9 +85,12 @@ html, body {
       z-index: 1;
       color: #fff;
       transform: translate(-50%, -50%);
-      font-size: 36px;
+      font-size: 28px;
       font-weight: 600;
-      font-family: 'Yrsa', serif; }
+      font-family: 'Yrsa', serif;
+      width: 70%;
+      text-align: center;
+      line-height: 35px; }
   .resume .meaningful-quotes {
     font-size: 0; }
     .resume .meaningful-quotes .quote {
@@ -113,13 +116,14 @@ html, body {
   .resume .bootstrap-circles {
     font-size: 0;
     font-family: 'Yrsa', serif;
-    padding: 10px; }
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5); }
     .resume .bootstrap-circles > div {
       font-size: initial;
       display: inline-block;
       width: 33%;
       text-align: center;
-      height: 250px;
+      height: 200px;
       vertical-align: top;
       padding: 10px;
       box-sizing: border-box; }
@@ -134,5 +138,38 @@ html, body {
       font-weight: 100;
       font-size: 17px;
       color: rgba(0, 0, 0, 0.7); }
+  .resume .work-experience {
+    font-size: 0; }
+    .resume .work-experience .title {
+      font-size: 28px;
+      text-align: center; }
+    .resume .work-experience .column {
+      width: 50%;
+      display: inline-block;
+      font-size: initial;
+      padding: 10px;
+      box-sizing: border-box;
+      vertical-align: top; }
+      .resume .work-experience .column:last-child {
+        padding-left: 0; }
+      .resume .work-experience .column.small {
+        width: 35%; }
+        .resume .work-experience .column.small + .column {
+          width: 65%; }
+    .resume .work-experience .experience {
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 10px 0; }
+    .resume .work-experience .company {
+      font-size: 18px;
+      display: inline-block; }
+    .resume .work-experience .duration {
+      text-align: right;
+      font-size: 15px;
+      display: inline-block; }
+  .resume .full-stack .title {
+    font-size: 28px;
+    text-align: center; }
+  .resume .full-stack .tier .title {
+    font-size: 20px; }
 
 /*# sourceMappingURL=style.css.map */

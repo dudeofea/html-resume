@@ -40,7 +40,7 @@ html, body {
 		}
 	}
 	.bootstrap-banner {
-		height: 150px;
+		height: 110px;
 		overflow: hidden;
 		position: relative;
 		img {
@@ -53,9 +53,12 @@ html, body {
 			z-index: 1;
 			color: $white;
 			transform: translate(-50%, -50%);
-			font-size: 36px;
+			font-size: 28px;
 			font-weight: 600;
 			font-family: 'Yrsa', serif;
+			width: 70%;
+			text-align: center;
+			line-height: 35px;
 		}
 	}
 	.meaningful-quotes{
@@ -89,12 +92,13 @@ html, body {
 		font-size: 0;
 		font-family: 'Yrsa', serif;
 		padding: 10px;
+		background-color: rgba(0,0,0,0.5);
 		& > div {
 			font-size: initial;
 			display: inline-block;
 			width: 33%;
 			text-align: center;
-			height: 250px;
+			height: 200px;
 			vertical-align: top;
 			padding: 10px;
 			box-sizing: border-box;
@@ -112,6 +116,54 @@ html, body {
 			font-weight: 100;
 			font-size: 17px;
 			color: rgba(0,0,0,0.7);
+		}
+	}
+	.work-experience {
+		font-size: 0;
+		.title {
+			font-size: 28px;
+			text-align: center;
+		}
+		.column {
+			width: 50%;
+			display: inline-block;
+			font-size: initial;
+			padding: 10px;
+			box-sizing: border-box;
+			vertical-align: top;
+			&:last-child {
+				padding-left: 0;
+			}
+			&.small {
+				width: 35%;
+				& + .column {
+					width: 65%;
+				}
+			}
+		}
+		.experience {
+			background-color: rgba(0,0,0,0.3);
+			margin: 10px 0;
+		}
+		.company {
+			font-size: 18px;
+			display: inline-block;
+		}
+		.duration {
+			text-align: right;
+			font-size: 15px;
+			display: inline-block;
+		}
+	}
+	.full-stack {
+		.title {
+			font-size: 28px;
+			text-align: center;
+		}
+		.tier {
+			.title {
+				font-size: 20px;
+			}
 		}
 	}
 }
