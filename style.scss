@@ -92,7 +92,7 @@ html, body {
 		font-size: 0;
 		font-family: 'Yrsa', serif;
 		padding: 10px;
-		background-color: rgba(0,0,0,0.5);
+		background-color: rgba(0,0,0,0.8);
 		& > div {
 			font-size: initial;
 			display: inline-block;
@@ -106,16 +106,18 @@ html, body {
 		.fas, .fab {
 			font-size: 50px;
 			margin: 8px;
+			color: $white;
 		}
 		.title {
 			font-size: 25px;
 			font-weight: 400;
 			margin-bottom: 5px;
+			color: $white;
 		}
 		.text {
 			font-weight: 100;
 			font-size: 17px;
-			color: rgba(0,0,0,0.7);
+			color: rgba($white, 0.7);
 		}
 	}
 	.work-experience {
@@ -123,12 +125,13 @@ html, body {
 		.title {
 			font-size: 28px;
 			text-align: center;
+			line-height: 40px;
 		}
 		.column {
 			width: 50%;
 			display: inline-block;
 			font-size: initial;
-			padding: 10px;
+			padding: 0 10px;
 			box-sizing: border-box;
 			vertical-align: top;
 			&:last-child {
@@ -142,8 +145,13 @@ html, body {
 			}
 		}
 		.experience {
-			background-color: rgba(0,0,0,0.3);
-			margin: 10px 0;
+			background-color: $blue_highlight;
+			border-radius: 5px;
+			margin-bottom: 10px;
+			padding: 10px;
+			&:last-child {
+				margin: 0;
+			}
 		}
 		.company {
 			font-size: 18px;
@@ -156,14 +164,35 @@ html, body {
 		}
 	}
 	.full-stack {
+		font-size: 0;
 		.title {
 			font-size: 28px;
 			text-align: center;
 		}
 		.tier {
+			width: (100%)/6;
+			font-size: initial;
+			display: inline-block;
+			vertical-align: top;
 			.title {
-				font-size: 20px;
+				font-size: 18px;
 			}
+			.skills {
+				font-size: 12px;
+			}
+		}
+	}
+	.images {
+		font-size: 0;
+		height: 160px;
+		div {
+			height: 100%;
+			max-width: 20%;
+			display: inline-block;
+			overflow: hidden;
+		}
+		img {
+			height: 100%;
 		}
 	}
 }
