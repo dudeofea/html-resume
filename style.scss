@@ -23,10 +23,11 @@ html, body {
 }
 
 .resume {
-	height:297mm;
-    width:210mm;
+	height:279mm;
+    width:216mm;
 	background-color: $white;
 	margin: 20px auto;
+	position: relative;
 	.header {
 		height: $header_height;
 		background-color: $blue;
@@ -40,25 +41,59 @@ html, body {
 		}
 	}
 	.bootstrap-banner {
-		height: 110px;
+		height: 320px;
 		overflow: hidden;
 		position: relative;
 		img {
-			filter: grayscale(70%) brightness(50%);
+			filter: grayscale(70%) brightness(18%);
+			width: 100%;
 		}
-		.title {
+		& > .title {
 			position: absolute;
-			top: 50%;
+			top: 30px;
 			left: 50%;
 			z-index: 1;
 			color: $white;
-			transform: translate(-50%, -50%);
+			transform: translate(-50%, 0);
 			font-size: 28px;
 			font-weight: 600;
 			font-family: 'Yrsa', serif;
 			width: 70%;
 			text-align: center;
 			line-height: 35px;
+		}
+	}
+	.bootstrap-circles {
+		font-size: 0;
+		font-family: 'Yrsa', serif;
+		padding: 10px;
+		position: absolute;
+		bottom: 0;
+		& > div {
+			font-size: initial;
+			display: inline-block;
+			width: 33%;
+			text-align: center;
+			height: 200px;
+			vertical-align: top;
+			padding: 10px;
+			box-sizing: border-box;
+		}
+		.fas, .fab {
+			font-size: 50px;
+			margin: 8px;
+			color: $white;
+		}
+		.title {
+			font-size: 25px;
+			font-weight: 400;
+			margin-bottom: 5px;
+			color: $white;
+		}
+		.text {
+			font-weight: 400;
+			font-size: 17px;
+			color: rgba($white, 0.7);
 		}
 	}
 	.meaningful-quotes{
@@ -86,38 +121,6 @@ html, body {
 		}
 		.company {
 			color: rgba(0,0,0,0.6);
-		}
-	}
-	.bootstrap-circles {
-		font-size: 0;
-		font-family: 'Yrsa', serif;
-		padding: 10px;
-		background-color: rgba(0,0,0,0.8);
-		& > div {
-			font-size: initial;
-			display: inline-block;
-			width: 33%;
-			text-align: center;
-			height: 200px;
-			vertical-align: top;
-			padding: 10px;
-			box-sizing: border-box;
-		}
-		.fas, .fab {
-			font-size: 50px;
-			margin: 8px;
-			color: $white;
-		}
-		.title {
-			font-size: 25px;
-			font-weight: 400;
-			margin-bottom: 5px;
-			color: $white;
-		}
-		.text {
-			font-weight: 100;
-			font-size: 17px;
-			color: rgba($white, 0.7);
 		}
 	}
 	.work-experience {
@@ -165,26 +168,70 @@ html, body {
 	}
 	.full-stack {
 		font-size: 0;
-		.title {
+		position: relative;
+		padding: 28px 10px 0 10px;
+		& > .title {
 			font-size: 28px;
 			text-align: center;
+			position: absolute;
+			width: 100%;
+			top: 0;
 		}
 		.tier {
-			width: (100%)/6;
+			width: calc((100%)/3 - 10px);
 			font-size: initial;
 			display: inline-block;
 			vertical-align: top;
+			background-color: $blue_highlight;
+			border-radius: 5px;
+			margin-right: 5px;
+			&:last-child {
+				margin-right: 0;
+			}
 			.title {
 				font-size: 18px;
+				text-align: center;
 			}
 			.skills {
 				font-size: 12px;
 			}
 		}
+		.row {
+
+		}
+	}
+	$icon-size: 50px;
+	.schooling {
+		margin: 10px;
+		padding: 10px 10px 10px 10px+($icon-size*2);
+		background-color: rgba(0,0,0,0.2);
+		position: relative;
+		i {
+			position: absolute;
+			top: 50%;
+			left: 5px+$icon-size;
+			font-size: $icon-size - 5px;
+			transform: translate(-50%, -50%);
+		}
+		.title {
+			font-size: 22px;
+			font-weight: 600;
+			line-height: 25px;
+		}
+		.institution {
+			font-size: 22px;
+			line-height: 25px;
+		}
+		.notes {
+			font-size: 16px;
+			font-weight: 100;
+			line-height: 25px;
+			margin-top: 10px;
+		}
 	}
 	.images {
 		font-size: 0;
-		height: 160px;
+		height: 164px;
 		div {
 			height: 100%;
 			max-width: 20%;
@@ -194,5 +241,35 @@ html, body {
 		img {
 			height: 100%;
 		}
+	}
+	.contact {
+		li {
+			display: inline-block;
+		}
+	}
+	.footer {
+		position: absolute;
+		width: 100%;
+		background-color: rgba(0,0,0,0.8);
+		bottom: 0;
+		color: white;
+		padding: 10px;
+		text-align: center;
+	}
+}
+
+//styles for when printing resume
+@page {
+	size:  auto;   /* auto is the initial value */
+	margin: 0mm;  /* this affects the margin in the printer settings */
+}
+@media print {
+	* {
+	    -webkit-print-color-adjust: exact !important;   /* Chrome, Safari */
+	    color-adjust: exact !important;                 /*Firefox*/
+	}
+	.resume {
+		margin: 0;
+		page-break-after: always;
 	}
 }

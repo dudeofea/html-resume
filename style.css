@@ -58,10 +58,11 @@ html, body {
   background-color: #191923; }
 
 .resume {
-  height: 297mm;
-  width: 210mm;
+  height: 279mm;
+  width: 216mm;
   background-color: #fff;
-  margin: 20px auto; }
+  margin: 20px auto;
+  position: relative; }
   .resume .header {
     height: 60px;
     background-color: #0E79B2; }
@@ -73,24 +74,53 @@ html, body {
       font-family: 'Patua One', sans-serif;
       color: #C2DFE3; }
   .resume .bootstrap-banner {
-    height: 110px;
+    height: 320px;
     overflow: hidden;
     position: relative; }
     .resume .bootstrap-banner img {
-      filter: grayscale(70%) brightness(50%); }
-    .resume .bootstrap-banner .title {
+      filter: grayscale(70%) brightness(18%);
+      width: 100%; }
+    .resume .bootstrap-banner > .title {
       position: absolute;
-      top: 50%;
+      top: 30px;
       left: 50%;
       z-index: 1;
       color: #fff;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, 0);
       font-size: 28px;
       font-weight: 600;
       font-family: 'Yrsa', serif;
       width: 70%;
       text-align: center;
       line-height: 35px; }
+  .resume .bootstrap-circles {
+    font-size: 0;
+    font-family: 'Yrsa', serif;
+    padding: 10px;
+    position: absolute;
+    bottom: 0; }
+    .resume .bootstrap-circles > div {
+      font-size: initial;
+      display: inline-block;
+      width: 33%;
+      text-align: center;
+      height: 200px;
+      vertical-align: top;
+      padding: 10px;
+      box-sizing: border-box; }
+    .resume .bootstrap-circles .fas, .resume .bootstrap-circles .fab {
+      font-size: 50px;
+      margin: 8px;
+      color: #fff; }
+    .resume .bootstrap-circles .title {
+      font-size: 25px;
+      font-weight: 400;
+      margin-bottom: 5px;
+      color: #fff; }
+    .resume .bootstrap-circles .text {
+      font-weight: 400;
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.7); }
   .resume .meaningful-quotes {
     font-size: 0; }
     .resume .meaningful-quotes .quote {
@@ -113,33 +143,6 @@ html, body {
       font-weight: 400; }
     .resume .meaningful-quotes .company {
       color: rgba(0, 0, 0, 0.6); }
-  .resume .bootstrap-circles {
-    font-size: 0;
-    font-family: 'Yrsa', serif;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.8); }
-    .resume .bootstrap-circles > div {
-      font-size: initial;
-      display: inline-block;
-      width: 33%;
-      text-align: center;
-      height: 200px;
-      vertical-align: top;
-      padding: 10px;
-      box-sizing: border-box; }
-    .resume .bootstrap-circles .fas, .resume .bootstrap-circles .fab {
-      font-size: 50px;
-      margin: 8px;
-      color: #fff; }
-    .resume .bootstrap-circles .title {
-      font-size: 25px;
-      font-weight: 400;
-      margin-bottom: 5px;
-      color: #fff; }
-    .resume .bootstrap-circles .text {
-      font-weight: 100;
-      font-size: 17px;
-      color: rgba(255, 255, 255, 0.7); }
   .resume .work-experience {
     font-size: 0; }
     .resume .work-experience .title {
@@ -174,22 +177,56 @@ html, body {
       font-size: 15px;
       display: inline-block; }
   .resume .full-stack {
-    font-size: 0; }
-    .resume .full-stack .title {
+    font-size: 0;
+    position: relative;
+    padding: 28px 10px 0 10px; }
+    .resume .full-stack > .title {
       font-size: 28px;
-      text-align: center; }
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      top: 0; }
     .resume .full-stack .tier {
-      width: 16.66667%;
+      width: calc((100%)/3 - 10px);
       font-size: initial;
       display: inline-block;
-      vertical-align: top; }
+      vertical-align: top;
+      background-color: #C2DFE3;
+      border-radius: 5px;
+      margin-right: 5px; }
+      .resume .full-stack .tier:last-child {
+        margin-right: 0; }
       .resume .full-stack .tier .title {
-        font-size: 18px; }
+        font-size: 18px;
+        text-align: center; }
       .resume .full-stack .tier .skills {
         font-size: 12px; }
+  .resume .schooling {
+    margin: 10px;
+    padding: 10px 10px 10px 110px;
+    background-color: rgba(0, 0, 0, 0.2);
+    position: relative; }
+    .resume .schooling i {
+      position: absolute;
+      top: 50%;
+      left: 55px;
+      font-size: 45px;
+      transform: translate(-50%, -50%); }
+    .resume .schooling .title {
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 25px; }
+    .resume .schooling .institution {
+      font-size: 22px;
+      line-height: 25px; }
+    .resume .schooling .notes {
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 25px;
+      margin-top: 10px; }
   .resume .images {
     font-size: 0;
-    height: 160px; }
+    height: 164px; }
     .resume .images div {
       height: 100%;
       max-width: 20%;
@@ -197,5 +234,31 @@ html, body {
       overflow: hidden; }
     .resume .images img {
       height: 100%; }
+  .resume .contact li {
+    display: inline-block; }
+  .resume .footer {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    color: white;
+    padding: 10px;
+    text-align: center; }
+
+@page {
+  size: auto;
+  /* auto is the initial value */
+  margin: 0mm;
+  /* this affects the margin in the printer settings */ }
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    /* Chrome, Safari */
+    color-adjust: exact !important;
+    /*Firefox*/ }
+  .resume {
+    margin: 0;
+    page-break-after: always; } }
 
 /*# sourceMappingURL=style.css.map */
