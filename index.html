@@ -36,20 +36,21 @@
 		</div>
 		<div class="work-experience">
 			<p class="title">Work Experience</p>
-			<div class="meaningful-quotes">
+			<span class="meaningful-quotes">
 				<div class="quote">
 					<p class="text">When we interviewed Denis in his 3rd year of university for a coop term, right there I realized we wanted him on the team. He was way ahead of his peers in programming knowledge. His dedication to side projects and hackatons were indicative of someone with passion for programming.</p>
 					<p class="author">Souhail Alavi</p>
-					<p class="company">Digital Fractal Technologies</p>
+					<p class="author-company">Digital Fractal Technologies</p>
 				</div>
 				<div class="quote">
 					<p class="text">Working with Denis on our software development team was a pleasure. His intelligence and out of the box thinking were an asset during design sessions as well as for day to day operational tasks</p>
 					<p class="author">Jaqueline Cornish</p>
-					<p class="company">Altus Geomatics</p>
+					<p class="author-company">Altus Geomatics</p>
 				</div>
-			</div>
+			</span>
 			<div class="column small">
 				<div class="experience">
+					<span class="symbolic-chevron right"></span>
 					<p class="company">IAC Publishing</p>
 					<p class="duration">(1 year) Jan 2017 - Dec 2017</p>
 					<ul class="description">
@@ -61,8 +62,9 @@
 					</ul>
 				</div>
 				<div class="experience">
+					<span class="symbolic-chevron left"></span>
 					<p class="company">Athabasca University</p>
-					<p class="duration">(4 months) Apr 2013 - Jul 2016</p>
+					<p class="duration">(4 months) Apr 2013 - Jul 2013</p>
 					<ul class="description">
 						<li>Created a 3D educational physics simulator with Kinect 1.0 and XNA</li>
 						<li>Designed multiple hand tracking libraries using depth/color imagery</li>
@@ -75,17 +77,18 @@
 					<p class="duration">(3.5 years) Aug 2013 - Dec 2016</p>
 					<ul class="description">
 						<li>Created iPhone / Android apps (both native and using Cordova/Ionic) for clients, often implementing niche features such as custom search / filtering, offline maps, accesibility, and general business logic</li>
-						<li>Created N-Tier Advertising managedment system for mobile displays with features including:
-							* A web portal with ad file management and google maps polygon geofencing
-							* An administrator panel with device tracking, server monitoring and GPS testing tools
-							* A secure file and geofence server sending compressed geofences to mobile displays using custom compression
-							* A custom hardware LED ad display, capable of handling hundreds of simultaneous ads with arbitrarily complex geofences, GPS tracking, remote SSH, 3G connectivity, picture and video display, low-voltage shutdown, and 5 minute regular updates for ad tracking and billing as well as error reporting
-							* A billing process with online payment, invoice tracking, and account management
+						<li>Created N-Tier Advertising managedment system for mobile displays with:
+							<ul class="bullets">
+								<li>A web portal with ad file management and google maps polygon geofencing</li>
+								<li>An administrator panel with device tracking, server monitoring and GPS testing tools</li>
+								<li>A secure file and geofence server sending compressed geofences to mobile displays using custom compression</li>
+								<li>A custom hardware LED ad display, capable of handling hundreds of simultaneous ads with arbitrarily complex geofences, GPS tracking, remote SSH, 3G connectivity, picture and video display, low-voltage shutdown, and 5 minute regular updates for ad tracking and billing as well as error reporting</li>
+								<li>A billing process with online payment, invoice tracking, and account management</li>
+							</ul>
 						</li>
 						<li>Helped coworkers with coding problems or process automation</li>
-						<li>Designed many simple graphical layouts over and above what a normal app UI looks like (intentful error messages, proper scrolling, custom data entry fields, etc)</li>
+						<li>Designed many graphical layouts over and above what a normal app UI looks like (intentful error messages, proper scrolling, custom data entry fields, etc)</li>
 						<li>Often helped clients find what they really wanted in an app that they could not immediately put into words, and often simplified complex designs into what an uninitiated user could understand</li>
-						<li>Generally had a good time</li>
 					</ul>
 				</div>
 			</div>
@@ -95,6 +98,7 @@
 		<div class="work-experience">
 			<div class="column">
 				<div class="experience">
+					<span class="symbolic-chevron right"></span>
 					<p class="company">Altus Geomatics Ltd</p>
 					<p class="duration">(8 months) Jan 2012 - Aug 2012</p>
 					<ul class="description">
@@ -118,18 +122,25 @@
 				</div>
 			</div>
 		</div>
+		<div class="schooling">
+			<i class="fas fa-graduation-cap"></i>
+			<p class="title">B.Sc. in Computer Engineering Co-op</p>
+			<p class="institution">University of Alberta</p>
+			<p class="notes">First year in French and Bilingual Highscool Diploma</p>
+		</div>
 		<div class="full-stack">
 			<p class="title">Full Stack Overview</p>
 			<div class="row">
 				<div class="tier">
 					<p class="title">Algorithms</p>
 					<ul class="skills">
-						<li>Custom compression for grid-based geofences</li>
-						<li>Custom finger tracking library for Kinect 1.0</li>
-						<li>DSP audio / video processing with MATLAB</li>
+						<li>Grid-based geofence compression</li>
+						<li>Custom finger tracking library</li>
+						<li>DSP audio / video with MATLAB</li>
 					</ul>
 				</div>
 				<div class="tier">
+					<span class="symbolic-chevron right"></span>
 					<p class="title">Web</p>
 					<ul class="skills">
 						<li>Custom UIs using CSS/JS from scratch</li>
@@ -138,32 +149,18 @@
 					</ul>
 				</div>
 				<div class="tier">
+					<span class="symbolic-chevron up"></span>
 					<p class="title">Web Servers</p>
 					<ul class="skills">
 						<li>Unit tested database transactions</li>
-						<li>Third party integrations with Stripe, MailChimp, etc</li>
-						<li>Site health statistics / response time optimizations</li>
+						<li>Integrations with Stripe, MailChimp, etc</li>
+						<li>Site statistics / response time optimizations</li>
 					</ul>
 				</div>
 			</div>
 			<div class="row">
 				<div class="tier">
-					<p class="title">Back End</p>
-					<ul class="skills">
-						<li>Unit tested socket servers</li>
-						<li>Queued processing jobs / front end status updates</li>
-						<li>Media conversion / file upload</li>
-					</ul>
-				</div>
-				<div class="tier">
-					<p class="title">Firmware</p>
-					<ul class="skills">
-						<li>JACK audio clients</li>
-						<li>FPGA / VHDL experience</li>
-						<li>uC / x86 programming</li>
-					</ul>
-				</div>
-				<div class="tier">
+					<span class="symbolic-chevron"></span>
 					<p class="title">Hardware</p>
 					<ul class="skills">
 						<li></li>
@@ -172,36 +169,50 @@
 						<li>PCB design / soldering</li>
 					</ul>
 				</div>
+				<div class="tier">
+					<span class="symbolic-chevron"></span>
+					<p class="title">Firmware</p>
+					<ul class="skills">
+						<li>JACK audio clients</li>
+						<li>FPGA / VHDL experience</li>
+						<li>uC / x86 programming</li>
+					</ul>
+				</div>
+				<div class="tier">
+					<p class="title">Back End</p>
+					<ul class="skills">
+						<li>Unit tested socket servers</li>
+						<li>Queued jobs / front end status updates</li>
+						<li>Media conversion / file upload</li>
+					</ul>
+				</div>
 			</div>
-		</div>
-		<div class="schooling">
-			<i class="fas fa-graduation-cap"></i>
-			<p class="title">B.Sc. in Computer Engineering Co-op</p>
-			<p class="institution">University of Alberta</p>
-			<p class="notes">First year in French and Bilingual Highscool Diploma</p>
 		</div>
 		<div class="images">
 			<div><img src="images/arduino_pedal_1.jpg"/></div>
-			<div><img src="images/arduino_pedal_5.jpg" styley="margin-left: -100px;"/></div>
+			<div><img src="images/arduino_pedal_5.jpg" style="margin-left: -18px;"/></div>
 			<div><img src="images/fringe_calendar.png"/></div>
-			<div><img src="images/Kinect_Gestures.png" styley="margin-left: -9px;"/></div>
+			<div><img src="images/Kinect_Gestures.png"/></div>
 			<div><img src="images/lens.png"/></div>
 		</div>
-		<div class="hobbies">
-			<li>Arduino Guitar Pedal</li>
-			<li>Twitch Cooks Breakfast</li>
-			<li>Battery Management System</li>
-		</div>
-		<div class="other-skills">
-			<p>Other skills not mentioned: Java, C, C++, C#, OpenCV, Arduino, RaspberryPi, CUDA, Elixir, Erlang, jQuery, JSON, PHP, Matlab, PIL, MySQL, SQLite, MongoDB, MPI, Cordova, Ionic</p>
+		<div class="projects">
+			<p class="title">Projects</p>
+			<div class="project align-left">
+				<span class="symbolic-chevron up"></span>
+				<p class="title">Arduino Guitar Pedal</p>
+			</div>
+			<div class="project align-right">
+				<span class="symbolic-chevron up"></span>
+				<p class="title">CUDA Python Demo</p>
+			</div>
 		</div>
 		<div class="footer">
 			<ul class="contact">
-				<li><i class="fas fa-graduation-cap"></i>Github: dudeofea</li>
-				<li><i class="fas fa-graduation-cap"></i>Email: dlachanc@ualberta.ca</li>
-				<li><i class="fas fa-graduation-cap"></i>Phone: (780) 716 - 8315</li>
+				<li><a href="https://github.com/dudeofea"><i class="fab fa-github"></i>github.com/dudeofea</a></li>
+				<li><a href="mailto:dlachanc@ualbert.ca"><i class="fas fa-envelope"></i>dlachanc@ualberta.ca</a></li>
+				<li><a href="tel:7807168315"><i class="fas fa-phone"></i>(780) 716 - 8315</a></li>
 			</ul>
-			<p>This Bootstrap-like resume was made from scratch in HTML/CSS</p>
+			<p>This Bootstrap-like resume was made from scratch in HTML &amp; CSS</p>
 		</div>
 	</div>
 	<div class="resume appendix">
@@ -209,6 +220,19 @@
 		<div class="experience">
 			<p class="company">Digital Fractal Technologies</p>
 			<p class="duration">(3.5 years) Aug 2013 - Dec 2016</p>
+			<p class="description">I was initially hired as a co-op student, but was offered a raise and continued employment after the end of my co-op term. I finished my education whilst working and eventually worked at Digital Fractal for a few years after university.
+				I very much enjoyed the main project I was hired for which was an automated digital billboard system mounted on taxis (more info at <a href="https://www.enrouteviewmedia.com/">www.enrouteviewmedia.com</a>).
+				I was heavily involved in all parts of the project, including hardware design, or more specifically hardware dissassembly as we had to interface from standard linux hardware (Raspberry Pi) to an embedded platform through a proprietary ethernet protocol.</p>
+			<p class="description">I also worked on a variety of mobile and desktop applications for clients mostly in the oilfield. Many of these apps were either a CMS (content management system) or were managed behind the scenes with a CMS. I used more third party integrations than I can count including Stripe, Mailgun, Mailchimp, Google Maps, Leaflet, D3, Dreamfactory.
+			I also wrote a lot of custom functionality when a plugin or third-party tool didn't have the features we wanted, such as a Javascript Canvas handwritten signature input for a mobile app, and a monthly billing system and invoicing system as well as a polygon geofence input for the taxi display project</p>
+			<p class="technologies">Python, Javacript, PHP, jQuery, HTML, CSS, SASS / SCSS, CakePHP, Docker, Twisted Python, Bash, RaspberryPi, Ionic, Cordova, npm, Node.js, Meteor.js, Ruby on Rails, C#, MySQL, SQLite, Stripe, Mailgun, Mailchimp, Google Maps, Leaflet, D3, Dreamfactory, Symphony, Cython</p>
+		</div>
+	</div>
+	<div class="resume appendix">
+		<p class="title">Appendix A: Detailed Work Experience</p>
+		<div class="experience">
+			<p class="company">Athabasca University</p>
+			<p class="duration">(4 months) Apr 2013 - Jul 2013</p>
 			<p class="description">I was initially hired as a co-op student, but was offered a raise and continued employment after the end of my co-op term. I finished my education whilst working and eventually worked at Digital Fractal for a few years after university.
 				I very much enjoyed the main project I was hired for which was an automated digital billboard system mounted on taxis (more info at <a href="https://www.enrouteviewmedia.com/">www.enrouteviewmedia.com</a>).
 				I was heavily involved in all parts of the project, including hardware design, or more specifically hardware dissassembly as we had to interface from standard linux hardware (Raspberry Pi) to an embedded platform through a proprietary ethernet protocol.</p>
