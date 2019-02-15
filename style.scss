@@ -8,10 +8,12 @@ html,body,div,span,applet,object,iframe,a,abbr,acronym,address,big,cite,code,del
 
 //color palette
 $white: #fff;
-$black: #191923;
+$black: #312F2F;
 $blue: #0E79B2;
+$red: #B23A48;
 $blue_highlight: #C2DFE3;
-$off-white: #fffce4;
+$off-white: #E6E8E6;
+$border-color: mix(#000, $off-white, 20%);
 
 //variables
 $header_height: 60px;
@@ -32,6 +34,10 @@ a {
 	color: inherit;
 }
 
+.red {
+	color: $red;
+}
+
 .resume {
 	height:279mm;
     width:216mm;
@@ -39,16 +45,31 @@ a {
 	margin: 20px auto;
 	position: relative;
 	overflow: hidden;
+	color: $black;
 	.header {
 		height: $header_height;
-		background-color: $blue;
+		background-color: #B23A48;
 		h1 {
 			height: $header_height;
 		    line-height: $header_height;
 		    text-align: center;
 			font-size: 30pt;
 			font-family: 'Patua One', sans-serif;
-			color: $blue_highlight;
+			color: #E6E8E6;
+			border-bottom: 3px solid rgba(0,0,0,0.4);
+			box-sizing: border-box;
+		}
+		i {
+			position: absolute;
+			top: 9px;
+			font-size: 40px;
+			color: #E6E8E6;
+			&.left {
+				left: 16px;
+			}
+			&.right {
+				right: 16px;
+			}
 		}
 	}
 	.bootstrap-banner {
@@ -124,17 +145,17 @@ a {
 			font-size: 16px;
 			font-weight: 100;
 		}
-		.author, .company {
+		.author, .author-company {
 			text-align: right;
 			color: rgba(0,0,0,0.8);
 			font-size: 18px;
 			font-weight: 400;
 		}
-		.company {
+		.author-company {
 			color: rgba(0,0,0,0.6);
+			font-size: 15px;
 		}
 	}
-	$border-color: mix($black, $off-white, 40%);
 	.symbolic-chevron {
 		height: 0;
 		width: 0;
@@ -191,7 +212,7 @@ a {
 	}
 	.work-experience {
 		font-size: 0;
-		background-color: #fffce4e6;
+		background-color: $off-white;
 		.title {
 			padding-top: 20px;
 			font-size: 30px;
@@ -208,10 +229,11 @@ a {
 			&:last-child {
 				padding-left: 0;
 			}
+			$small-width: 36%;
 			&.small {
-				width: 35%;
+				width: $small-width;
 				& + .column {
-					width: 65%;
+					width: 100% - $small-width;
 				}
 			}
 			&:first-of-type {
@@ -240,7 +262,7 @@ a {
 		}
 		.experience {
 			border-radius: 3px;
-			padding: 60px 20px 0px 15px;
+			padding: 60px 20px 0px 20px;
 			position: relative;
 		}
 		.company {
@@ -248,7 +270,7 @@ a {
 			display: inline-block;
 			font-weight: 600;
 			top: 13px;
-			left: 15px;
+			left: 20px;
 			position: absolute;
 			font-family: Yrsa, serif;
 		}
@@ -258,7 +280,7 @@ a {
 			display: inline-block;
 			font-weight: 100;
 			top: 36px;
-			left: 15px;
+			left: 20px;
 			position: absolute;
 			font-family: Yrsa, serif;
 		}
@@ -294,14 +316,14 @@ a {
 		}
 		.row {
 			position: relative;
+			text-align: center;
 		}
 		.tier {
-			width: (100%)/3;
+			width: 250px;
 			font-size: initial;
 			display: inline-block;
 			vertical-align: top;
-			padding: 15px;
-			box-sizing: border-box;
+			padding: 15px 10px;
 			position: relative;
 			&:last-child {
 				margin-right: 0;
@@ -312,7 +334,7 @@ a {
 				text-align: center;
 			}
 			.skills {
-				font-size: 14px;
+				font-size: 15px;
 				line-height: 16px;
 				text-align: center;
 				font-family: Yrsa, serif;
@@ -323,7 +345,7 @@ a {
 				&:after {
 					content: " ";
 					height: 0;
-					width: 70%;
+					width: 77%;
 					border-bottom: 3pt solid $border-color;
 					position: absolute;
 					bottom: -9px;
@@ -334,7 +356,7 @@ a {
 				.tier:after {
 					content: " ";
 					width: 0;
-					height: 140%;
+					height: 160%;
 					border-right: 3pt solid $border-color;
 					position: absolute;
 					right: 0;
@@ -355,6 +377,7 @@ a {
 		color: $white;
 		position: relative;
 		font-family: 'Patua One', sans-serif;
+		margin-top: 5px;
 		i {
 			position: absolute;
 			top: 50%;
@@ -407,7 +430,7 @@ a {
 			width: 100%;
 			top: 0;
 		}
-		$project-top-padding: 30px;
+		$project-top-padding: 35px;
 		.project {
 			position: relative;
 			display: inline-block;
@@ -415,12 +438,17 @@ a {
 			width: 50%;
 			box-sizing: border-box;
 			padding: $project-top-padding 20px 20px 20px;
+			vertical-align: top;
 			.title {
 				border-top: 3pt solid $border-color;
 				font-family: Yrsa, serif;
 				font-size: 20px;
 				padding: 5px 0;
 				max-width: 270px;
+			}
+			.description {
+				font-family: Yrsa, serif;
+				font-size: 16px;
 			}
 		}
 		.align-left, .align-right {
@@ -436,7 +464,7 @@ a {
 				right: 65px;
 				left: auto;
 			}
-			.title {
+			.title, .description {
 				margin-left: auto;
 				text-align: right;
 			}
